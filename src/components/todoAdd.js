@@ -17,9 +17,12 @@ export default function TodoAdd({ onAdd }) {
 
   return (
     <div className="container my-3">
-      <h3 className="text-center">Add a Todo Task</h3>
-      <form className="row g-3 justify-content-center" onSubmit={handleSubmit}>
-        <div className="col-auto">
+      <h3 className="text-center mb-4 text-white">Add a Todo Task</h3>
+      <form
+        className="d-flex justify-content-center align-items-center gap-3 flex-wrap"
+        onSubmit={handleSubmit}
+      >
+        <div>
           <label htmlFor="text" className="visually-hidden">
             Title
           </label>
@@ -32,7 +35,7 @@ export default function TodoAdd({ onAdd }) {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div className="col-auto">
+        <div>
           <label htmlFor="Desc" className="visually-hidden">
             Description
           </label>
@@ -45,8 +48,11 @@ export default function TodoAdd({ onAdd }) {
             onChange={(e) => setDesc(e.target.value)}
           />
         </div>
-        <div className="col-auto">
-          <button type="submit" className="btn btn-sm btn-outline-primary mb-3">
+        <div>
+          <button
+            type="submit"
+            className="btn btn-sm btn-primary justify-content-center"
+          >
             Add Todo
           </button>
         </div>

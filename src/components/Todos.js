@@ -8,15 +8,22 @@ export default function Todos({ todos, onDelete, onAdd }) {
 
   const checkEmpty = () => {
     return todos.length === 0 ? (
-      <p className="text-center">No todos to display!</p>
+      <p className="text-center mt-5 text-white ">No todos to display!</p>
     ) : null;
   };
 
   return (
-    <div className="todos" style={{ minHeight: "85vh", padding: "20px" }}>
-      <TodoAdd onAdd={onAdd} />
-      <h3 className="text-center">Todos List</h3>
-      {checkEmpty() || passTodo}
+    <div className="container d-flex justify-content-center align-items-center">
+      <div
+        className="glass-card p-4 w-100"
+        style={{ maxWidth: "1100px", minHeight: "600px" }}
+      >
+        <TodoAdd onAdd={onAdd} />
+        <h3 className="text-center mt-5 text-white">Todos List</h3>
+        <div className="row g-4 justify-content-center">
+          {checkEmpty() || passTodo}
+        </div>
+      </div>
     </div>
   );
 }

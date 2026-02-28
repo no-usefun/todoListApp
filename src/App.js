@@ -3,8 +3,8 @@ import Header from "./components/Header";
 import Todos from "./components/Todos";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import About from "./components/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   let intiTodos = [];
@@ -40,18 +40,24 @@ function App() {
   }, [todos]);
 
   return (
-    <BrowserRouter>
-      <Header title="MyTodoList" searchBar={false} />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={<Todos todos={todos} onDelete={onDelete} onAdd={onAdd} />}
-        />
-        <Route exact path="/about" element={<About />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="app-wrapper">
+      <BrowserRouter>
+        <Header title="MyTodoList" searchBar={false} />
+        <main className="main-content">
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <Todos todos={todos} onDelete={onDelete} onAdd={onAdd} />
+              }
+            />
+            <Route exact path="/ContactMe" element={<ContactMe />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 
