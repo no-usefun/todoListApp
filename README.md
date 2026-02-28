@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 📝 Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based Todo List application that allows users to create, manage, and persist daily tasks efficiently.  
+The application is built using Create React App and follows a modular component-based architecture.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+> Deployed Application: [https://your-deployed-link.com  
+(Add your actual deployed URL here)](https://todolistapp-67a4.onrender.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Features
 
-### `npm test`
+- Add new todos  
+- Delete todos  
+- Persistent storage using **LocalStorage**  
+- Mark important todos (feature planned)  
+- Clean and modular component structure  
+- Responsive layout  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend:** React (Create React App)  
+- **State Management:** React Hooks  
+- **Storage:** Browser LocalStorage  
+- **Styling:** CSS  
+- **Testing:** Jest + React Testing Library  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Project Structure
 
-### `npm run eject`
+```
+TODO-LIST/
+│
+├── node_modules/
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── Contact.js
+│   │   ├── ContactMe.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── todoAdd.js
+│   │   ├── TodoDisplay.js
+│   │   └── Todos.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   ├── index.css
+│   ├── App.test.js
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+│
+├── .gitignore
+├── package.json
+└── package-lock.json
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Installation & Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+git clone https://github.com/your-username/TODO-LIST.git
+```
 
-## Learn More
+### 2. Navigate to the Project Directory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+cd TODO-LIST
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Install Dependencies
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4. Start Development Server
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Application runs at:
 
-### Making a Progressive Web App
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📖 Application Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. User enters a task in the input field.
+2. Task is added to application state.
+3. State is synchronized with **LocalStorage**.
+4. On reload, todos are restored from LocalStorage.
+5. Users can delete tasks.
+6. (Upcoming) Users can mark tasks as **Important**.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧪 Running Tests
 
-### `npm run build` fails to minify
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📈 Planned Improvements
+
+- Add **Mark as Important** functionality  
+- Minor UI/Styling bug fixes  
+- UI refinement for better visual hierarchy  
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
