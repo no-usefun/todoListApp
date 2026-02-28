@@ -1,25 +1,35 @@
 # 📝 Todo List Application
 
-A React-based Todo List application that allows users to create, manage, and organize daily tasks efficiently.  
-Built using Create React App with a modular component structure.
+A React-based Todo List application that allows users to create, manage, and persist daily tasks efficiently.  
+The application is built using Create React App and follows a modular component-based architecture.
+
+---
+
+## 🌐 Live Demo
+
+> Deployed Application: [https://your-deployed-link.com  
+(Add your actual deployed URL here)](https://todolistapp-67a4.onrender.com)
 
 ---
 
 ## 📌 Features
 
-- Add new todos
-- Display list of todos
-- Delete todos
-- Component-based architecture
-- Basic routing support (Contact / ContactMe pages)
+- Add new todos  
+- Delete todos  
+- Persistent storage using **LocalStorage**  
+- Mark important todos (feature planned)  
+- Clean and modular component structure  
+- Responsive layout  
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** React (Create React App)
-- **Styling:** CSS
-- **Testing:** Jest + React Testing Library
+- **Frontend:** React (Create React App)  
+- **State Management:** React Hooks  
+- **Storage:** Browser LocalStorage  
+- **Styling:** CSS  
+- **Testing:** Jest + React Testing Library  
 
 ---
 
@@ -82,7 +92,7 @@ npm install
 npm start
 ```
 
-The application will run at:
+Application runs at:
 
 ```
 http://localhost:3000
@@ -90,13 +100,14 @@ http://localhost:3000
 
 ---
 
-## 📖 Application Flow
+## 📖 Application Workflow
 
 1. User enters a task in the input field.
-2. `todoAdd` component captures the input.
-3. State is updated in the parent component.
-4. `TodoDisplay` renders the updated list dynamically.
-5. User can delete tasks from the list.
+2. Task is added to application state.
+3. State is synchronized with **LocalStorage**.
+4. On reload, todos are restored from LocalStorage.
+5. Users can delete tasks.
+6. (Upcoming) Users can mark tasks as **Important**.
 
 ---
 
@@ -108,17 +119,14 @@ npm test
 
 ---
 
-## 📌 Future Improvements
+## 📈 Planned Improvements
 
-- Edit todo functionality
-- Mark todos as completed
-- Persist data using Local Storage
-- Add filtering (All / Completed / Pending)
-- Improve UI with a component library
-- Deploy on Vercel / Netlify
+- Add **Mark as Important** functionality  
+- Minor UI/Styling bug fixes  
+- UI refinement for better visual hierarchy  
 
 ---
 
 ## 📄 License
 
-This project is developed for educational purposes.
+This project is developed for educational and portfolio purposes.
