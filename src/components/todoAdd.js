@@ -6,11 +6,16 @@ export default function TodoAdd({ onAdd }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!title || !desc) {
-      alert("Title and Description cannot be empty!");
+    if (!title) {
+      alert("Title cannot be empty!");
       return;
     }
-    onAdd(title, desc);
+
+    if (!desc) {
+      onAdd(title, title);
+    } else {
+      onAdd(title, desc);
+    }
     setTitle("");
     setDesc("");
   }

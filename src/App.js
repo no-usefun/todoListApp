@@ -17,27 +17,35 @@ function App() {
   const onDelete = (todo) => {
     setTodos(
       todos.filter((e) => {
-        return e !== todo;
+        return e.id !== todo.id;
       }),
     );
-
-    localStorage.setItem("todos", JSON.stringify(todos));
   };
 
   const onAdd = (title, desc) => {
-    let id = todos.length + 1;
-    const myTodo = {
-      id: id,
-      title: title,
-      desc: desc,
-    };
-    setTodos([...todos, myTodo]);
+    setTodos((prev) => [
+      ...prev,
+      {
+        id: Date.now(),
+        title,
+        desc,
+        imp: false,
+      },
+    ]);
   };
 
   const [todos, setTodos] = useState(intiTodos);
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+
+  const toggleImp = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, imp: !todo.imp } : todo,
+      ),
+    );
+  };
 
   return (
     <div className="app-wrapper">
@@ -49,7 +57,12 @@ function App() {
               exact
               path="/"
               element={
-                <Todos todos={todos} onDelete={onDelete} onAdd={onAdd} />
+                <Todos
+                  todos={todos}
+                  onDelete={onDelete}
+                  onAdd={onAdd}
+                  toggleImp={toggleImp}
+                />
               }
             />
             <Route exact path="/ContactMe" element={<ContactMe />} />

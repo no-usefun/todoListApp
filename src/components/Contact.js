@@ -97,13 +97,13 @@ export default function Contact() {
 
         {success && (
           <div className="text-success mt-3 text-center">
-            Message sent successfully.
+            <strong>Message sent successfully.</strong>
           </div>
         )}
 
         {error && (
           <div className="text-danger mt-3 text-center">
-            Something went wrong. Try again.
+            <strong>Something went wrong. Try again.</strong>
           </div>
         )}
       </div>
