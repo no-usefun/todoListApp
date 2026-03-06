@@ -30,11 +30,21 @@ function App() {
         title,
         desc,
         imp: false,
+        completed: false,
       },
     ]);
   };
 
+  const onComplete = (todo) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((t) =>
+        t.id === todo.id ? { ...t, completed: !t.completed, imp: false } : t,
+      ),
+    );
+  };
+
   const [todos, setTodos] = useState(intiTodos);
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -42,9 +52,24 @@ function App() {
   const toggleImp = (id) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
-        todo.id === id ? { ...todo, imp: !todo.imp } : todo,
+        todo.id === id && !todo.completed ? { ...todo, imp: !todo.imp } : todo,
       ),
     );
+  };
+
+  const [Filter, setFilter] = useState("all");
+
+  const filteredTodos = (todos) => {
+    switch (Filter) {
+      case "important":
+        return todos.filter((todo) => todo.imp);
+      case "completed":
+        return todos.filter((todo) => todo.completed);
+      case "pending":
+        return todos.filter((todo) => !todo.completed);
+      default:
+        return todos;
+    }
   };
 
   return (
@@ -58,10 +83,13 @@ function App() {
               path="/"
               element={
                 <Todos
-                  todos={todos}
+                  todos={filteredTodos(todos)}
                   onDelete={onDelete}
                   onAdd={onAdd}
                   toggleImp={toggleImp}
+                  onComplete={onComplete}
+                  filter={Filter}
+                  setFilter={setFilter}
                 />
               }
             />
