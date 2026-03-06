@@ -10,8 +10,15 @@ export default function Todos({
   onComplete,
   Filter,
   setFilter,
+  counts,
 }) {
-  const passTodo = todos.map((todo) => (
+  const sortedTodos = [...todos].sort((a, b) => {
+    if (a.completed !== b.completed) return a.completed - b.completed;
+    if (a.imp !== b.imp) return b.imp - a.imp;
+    return 0;
+  });
+
+  const passTodo = sortedTodos.map((todo) => (
     <TodoDisplay
       key={todo.id}
       todo={todo}
@@ -38,7 +45,7 @@ export default function Todos({
       >
         <TodoAdd onAdd={onAdd} />
         <div className="container todo-scroll">
-          <TodoHeader filter={Filter} setFilter={setFilter} />
+          <TodoHeader filter={Filter} setFilter={setFilter} counts={counts} />
           <div className="row g-4 justify-content-center">
             {checkEmpty() || passTodo}
           </div>

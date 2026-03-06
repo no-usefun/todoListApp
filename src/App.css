@@ -170,3 +170,10 @@ body,
   );
   border-radius: 12px;
 }
+
+.todo-count {
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  vertical-align: middle;
+}

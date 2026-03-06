@@ -72,6 +72,13 @@ function App() {
     }
   };
 
+  const counts = {
+    all: todos.length,
+    pending: todos.filter((t) => !t.completed).length,
+    completed: todos.filter((t) => t.completed).length,
+    important: todos.filter((t) => t.imp).length,
+  };
+
   return (
     <div className="app-wrapper">
       <BrowserRouter>
@@ -90,6 +97,7 @@ function App() {
                   onComplete={onComplete}
                   Filter={Filter}
                   setFilter={setFilter}
+                  counts={counts}
                 />
               }
             />
