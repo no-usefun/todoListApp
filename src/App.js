@@ -88,7 +88,7 @@ function App() {
                   onAdd={onAdd}
                   toggleImp={toggleImp}
                   onComplete={onComplete}
-                  filter={Filter}
+                  Filter={Filter}
                   setFilter={setFilter}
                 />
               }

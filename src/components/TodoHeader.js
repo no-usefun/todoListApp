@@ -13,9 +13,10 @@ export default function TodoHeader({ filter, setFilter }) {
       <div className="filter-bar d-flex gap-2">
         {filters.map((f) => (
           <button
+            aria-pressed={filter === f.key}
             key={f.key}
-            className={`btn btn-sm ${
-              filter === f.key ? "btn-primary" : "btn-outline-light"
+            className={`btn btn-sm btn-outline-light ${
+              filter === f.key ? "active" : ""
             }`}
             onClick={() => setFilter(f.key)}
           >

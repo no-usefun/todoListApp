@@ -20,9 +20,11 @@ Example:
 
 ![Todo App UI](public/ui-preview.png)
 
-You can add more screenshots if needed:
+![Task Filtering](public/Completed-view.png)
 
-![Task Filtering](assets/filter-view.png)
+![Task Filtering](public/Pending-view.png)
+
+![Task Filtering](public/Important-view.png)
 
 ---
 
