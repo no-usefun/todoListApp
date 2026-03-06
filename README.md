@@ -1,44 +1,122 @@
 # 📝 Todo List Application
 
-A React-based Todo List application that allows users to create, manage, and persist daily tasks efficiently.  
-The application is built using Create React App and follows a modular component-based architecture.
+A **React-based Todo List application** that allows users to create, organize, and manage daily tasks efficiently.  
+The application uses **React Hooks, LocalStorage persistence, filtering, and a responsive Bootstrap UI**.
 
 ---
 
-## 🌐 Live Demo
+# 🌐 Live Demo
 
-> Deployed Application: [https://your-deployed-link.com  
-(Add your actual deployed URL here)](https://todolistapp-67a4.onrender.com)
-
----
-
-## 📌 Features
-
-- Add new todos  
-- Delete todos  
-- Persistent storage using **LocalStorage**  
-- Mark important todos (feature planned)  
-- Clean and modular component structure  
-- Responsive layout  
+Deployed Application:  
+https://todolistapp-67a4.onrender.com
 
 ---
 
-## 🛠 Tech Stack
+# 📸 Application UI
 
-- **Frontend:** React (Create React App)  
-- **State Management:** React Hooks  
-- **Storage:** Browser LocalStorage  
-- **Styling:** CSS  
-- **Testing:** Jest + React Testing Library  
+Screenshots of the application UI are stored inside the **assets folder**.
+
+Example:
+
+![Todo App UI](public/ui-preview.png)
+
+You can add more screenshots if needed:
+
+![Task Filtering](assets/filter-view.png)
 
 ---
 
-## 📂 Project Structure
+# 📌 Features
+
+## Task Management
+
+- Add new tasks
+- Delete existing tasks
+- Mark tasks as **completed**
+- Mark tasks as **important**
+- Completed tasks automatically **remove the important flag**
+
+## Filtering System
+
+Users can filter tasks using:
+
+- **All** – shows every task
+- **Important** – shows starred tasks
+- **Completed** – shows finished tasks
+- **Pending** – shows unfinished tasks
+
+## Persistent Storage
+
+- Todos are stored in **browser LocalStorage**
+- Tasks remain available after page refresh
+
+## UI / UX
+
+- Responsive **Bootstrap layout**
+- Card-based task display
+- Visual indicators for:
+  - Important tasks ⭐
+  - Completed tasks ✓
+- Active filter highlighting
+- Scrollable task container
+
+## Routing
+
+Implemented using **React Router**
+
+Pages:
+
+- **Home** – Todo manager
+- **Contact** – simple contact page
+
+## Component-Based Architecture
+
+The application follows modular React component design.
+
+---
+
+# 🛠 Tech Stack
+
+**Frontend**
+
+- React (Create React App)
+
+**State Management**
+
+- React Hooks (`useState`, `useEffect`)
+
+**Routing**
+
+- React Router
+
+**Storage**
+
+- Browser LocalStorage
+
+**Styling**
+
+- Bootstrap
+- Custom CSS
+
+**Testing**
+
+- Jest
+- React Testing Library
+
+**Deployment**
+
+- Render
+
+---
+
+# 📂 Project Structure
 
 ```
 TODO-LIST/
 │
-├── node_modules/
+├── assets/
+│   └── ui-preview.png
+│
 ├── public/
 │
 ├── src/
@@ -66,27 +144,27 @@ TODO-LIST/
 
 ---
 
-## 🚀 Installation & Setup
+# 🚀 Installation & Setup
 
-### 1. Clone the Repository
+## 1 Clone the Repository
 
 ```
 git clone https://github.com/your-username/TODO-LIST.git
 ```
 
-### 2. Navigate to the Project Directory
+## 2 Navigate to the Project Directory
 
 ```
 cd TODO-LIST
 ```
 
-### 3. Install Dependencies
+## 3 Install Dependencies
 
 ```
 npm install
 ```
 
-### 4. Start Development Server
+## 4 Start Development Server
 
 ```
 npm start
@@ -100,18 +178,22 @@ http://localhost:3000
 
 ---
 
-## 📖 Application Workflow
+# 📖 Application Workflow
 
-1. User enters a task in the input field.
-2. Task is added to application state.
-3. State is synchronized with **LocalStorage**.
-4. On reload, todos are restored from LocalStorage.
-5. Users can delete tasks.
-6. (Upcoming) Users can mark tasks as **Important**.
+1. User enters a task using the input form.
+2. Task is stored in **React state**.
+3. The state synchronizes with **LocalStorage**.
+4. Tasks are displayed as **cards**.
+5. Users can:
+   - mark tasks important
+   - mark tasks completed
+   - delete tasks
+6. Users can filter tasks using the **navigation filter bar**.
+7. On page refresh, tasks are restored from **LocalStorage**.
 
 ---
 
-## 🧪 Running Tests
+# 🧪 Running Tests
 
 ```
 npm test
@@ -119,14 +201,16 @@ npm test
 
 ---
 
-## 📈 Planned Improvements
+# 📈 Future Improvements
 
-- Add **Mark as Important** functionality  
-- Minor UI/Styling bug fixes  
-- UI refinement for better visual hierarchy  
+- Drag and drop task ordering
+- Due dates for tasks
+- Dark / light theme toggle
+- Task editing feature
+- Backend integration for multi-device sync
 
 ---
 
-## 📄 License
+# 📄 License
 
-This project is developed for educational and portfolio purposes.
+This project is developed for **educational and portfolio purposes**.
