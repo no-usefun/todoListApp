@@ -4,7 +4,6 @@ import Todos from "./components/Todos";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ContactMe from "./components/ContactMe";
 
 function App() {
   let intiTodos = [];
