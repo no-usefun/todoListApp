@@ -25,29 +25,6 @@ export default function Header({ title = "Your title here" }) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink
-                to="/"
-                end
-                className={({ isActive }) =>
-                  "nav-link " + (isActive ? "active" : "")
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                to="/ContactMe"
-                className={({ isActive }) =>
-                  "nav-link " + (isActive ? "active" : "")
-                }
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li className="nav-divider"></li>
-            <li className="nav-item">
               <a
                 className="nav-link d-flex align-items-center gap-2"
                 href="https://github.com/no-usefun"
@@ -61,7 +38,7 @@ export default function Header({ title = "Your title here" }) {
             <li className="nav-item">
               <a
                 className="nav-link d-flex align-items-center gap-2"
-                href="https://github.com/no-usefun"
+                href="https://no-usefun.github.io/Portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
