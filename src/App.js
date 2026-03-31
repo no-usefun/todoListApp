@@ -100,7 +100,6 @@ function App() {
                 />
               }
             />
-            <Route exact path="/ContactMe" element={<ContactMe />} />
           </Routes>
         </main>
         <Footer />
